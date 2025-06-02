@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>シャドウバースエボルヴ紹介サイト</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #121212;
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+      background-image: url('https://images.unsplash.com/photo-1610301021496-d21bb1652d4c?auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+    }
+
+    header {
+      background: rgba(31, 31, 31, 0.9);
+      padding: 20px;
+      text-align: center;
+    }
+
+    header img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    nav {
+      background: #333;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 5px 10px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00bfff;
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 40px 20px;
+      text-align: center;
+      max-width: 1000px;
+      margin: 0 auto;
+      background-color: rgba(18, 18, 18, 0.9);
+      border-radius: 12px;
+      margin-top: 20px;
+    }
+
+    section:nth-of-type(even) {
+      background-color: rgba(26, 26, 26, 0.9);
+    }
+
+    ul {
+      text-align: left;
+      max-width: 800px;
+      margin: 0 auto;
+      padding-left: 20px;
+      list-style-type: none;
+    }
+
+    ul li {
+      margin-bottom: 30px;
+    }
+
+    .class-images {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+
+    .class-images img {
+      width: 180px;
+      height: auto;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 191, 255, 0.3);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .class-images img:hover {
+      transform: scale(1.05);
+    }
+
+    a {
+      color: #00bfff;
+      text-decoration: underline;
+    }
+
+    footer {
+      background: #1f1f1f;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9em;
+      margin-top: 40px;
+    }
+
+    /* モーダル用スタイル */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-close {
+      position: fixed;
+      top: 20px;
+      right: 30px;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 1001;
+      user-select: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <img src="img/eboeuvu.jpg" alt="Shadowverse EVOLVE キービジュアル" />
+    <h1>ShadowverseEVOLVE</h1>
+    <p>デジタルからリアルへ――革新のトレーディングカードゲーム</p>
+  </header>
+
+  <nav>
+    <a href="#about">ゲーム紹介</a>
+    <a href="#classes">クラス紹介</a>
+    <a href="#howto">遊び方</a>
+    <a href="#products">商品情報</a>
+    <a href="#news">ニュース</a>
+    <a href="#community">コミュニティ</a>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>ゲーム紹介</h2>
+      <p>シャドウバースエボルヴは、Cygamesの人気デジタルカードゲーム「Shadowverse」を基にしたリアルTCGです。</p>
+      <p><strong>ShadowverseとEVOLVEの違い</strong><br>
+        デジタル版では自動処理やエフェクト演出がありますが、EVOLVEではリアルカードによる戦略的なプレイが楽しめます。
+        独自要素として「クイック」「毎ターン進化可能」「一部カードのバランス調整」などがあります。
+      </p>
+      <p><strong>クイックとは？</strong><br>
+        相手ターン中に使えるカード効果。即座の対応で戦局を有利に運べます。</p>
+    </section>
+
+    <section id="classes">
+      <h2>クラス紹介</h2>
+      <p>7つのクラスから戦略に合ったデッキを選ぼう！</p>
+      <img src="img/eruhu.png" alt="エルフ" />
+      <ul>
+        <li>
+          <strong>エルフ：</strong>手札を増やしながら低コストフォロワーを展開するコンボ特化クラス。
+          <div class="class-images">
+            <img src="img/eruhuUR-u01.png" class="card-image" alt="エルフ1">
+            <img src="img/eruhu amyu.png" class="card-image" alt="エルフ2">
+            <img src="img/eruhu sp.png" class="card-image" alt="エルフ3">
+            <img src="img/sekka-001.png" class="card-image" alt="エルフ4">
+            <img src="img/o-kissu-002.png" class="card-image" alt="エルフ5">
+          </div>
+        </li>
+        <li>
+          <strong>ロイヤル：</strong>多数のフォロワーで盤面を制圧。フォロワー同士の連携が鍵。
+          <div class="class-images">
+            <img src="img/bp06-u02.png" class="card-image" alt="ロイヤル1">
+            <img src="img/ri am.png" class="card-image" alt="ロイヤル2">
+            <img src="img/ri sp.png" class="card-image" alt="ロイヤル3">
+            <img src="img/aite-ru-018.png" class="card-image" alt="ロイヤル4">
+            <img src="img/arube-ru-019.png" class="card-image" alt="ロイヤル5">
+          </div>
+        </li>
+        <li>
+          <strong>ドラゴン：</strong>クラスで唯一のPP加速で早期に高コストカードを展開。パワー重視。
+          <div class="class-images">
+            <img src="img/bp01_u04.png" class="card-image" alt="ドラゴン1">
+            <img src="img/DR am.png" class="card-image" alt="ドラゴン2">
+            <img src="img/dr sp.png" class="card-image" alt="ドラゴン3">
+            <img src="img/garumi-057.png" class="card-image" alt="ドラゴン4">
+            <img src="img/giruva-054.png" class="card-image" alt="ドラゴン5">
+          </div>
+        </li>
+        <li>
+          <strong>ウィッチ：</strong>スペルと土の秘術を駆使するテクニカルな戦法。
+          <div class="class-images">
+            <img src="img/bp14-u03.png" class="card-image" alt="ウィッチ1">
+            <img src="img/w am.png" class="card-image" alt="ウィッチ2">
+            <img src="img/w sp.png" class="card-image" alt="ウィッチ3">
+            <img src="img/ann-001.png" class="card-image" alt="ウィッチ4">
+            <img src="img/dorosi-037.png" class="card-image" alt="ウィッチ5">
+          </div>
+        </li>
+        <li>
+          <strong>ナイトメア：</strong>墓場活用・破壊・再利用を得意とするクラス。
+          <div class="class-images">
+            <img src="img/bp08-u05.png" class="card-image" alt="ナイトメア1">
+            <img src="img/nm am.png" class="card-image" alt="ナイトメア2">
+            <img src="img/nm sp.png" class="card-image" alt="ナイトメア3">
+          </div>
+        </li>
+        <li>
+          <strong>ビショップ：</strong>回復とアミュレットで粘り強く戦う守備型クラス。
+          <div class="class-images">
+            <img src="img/bp08-u06.png" class="card-image" alt="ビショップ1">
+            <img src="img/bs am.png" class="card-image" alt="ビショップ2">
+            <img src="img/bs sp.png" class="card-image" alt="ビショップ3">
+          </div>
+        </li>
+        <li>
+          <strong>ニュートラル：</strong>どのクラスでも活躍できる万能サポートカード群。
+          <div class="class-images">
+            <img src="img/bp10-u07.png" class="card-image" alt="ニュートラル1">
+            <img src="img/nt am.png" class="card-image" alt="ニュートラル2">
+            <img src="img/nt sp.png" class="card-image" alt="ニュートラル3">
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="art">
+      <h2>カードイラストの魅力</h2>
+      <p>Shadowverse EVOLVEのカードは、美麗なアートが特徴。キャラクターの息遣いまで感じられる高精細なイラストは、プレイヤーを幻想的な世界へと誘います。</p>
+      <p>人気イラストレーターによる描き下ろしアートや、カードごとに異なる雰囲気の背景、演出がファンの心をつかみます。</p>
+      <div class="class-images">
+        <img src="img/ri-syena-u03.png" class="card-image" alt="代表的なカード1">
+        <img src="img/soredemou02.png" class="card-image" alt="代表的なカード2">
+        <img src="img/spgirune.png" class="card-image" alt="代表的なカード3">
+        <img src="img/zyaba-u04-2.png" class="card-image" alt="代表的なカード4">
+        <img src="img/sahaisuu07.png" class="card-image" alt="代表的なカード5">
+        <img src="img/zyannu-sp02.png" class="card-image" alt="代表的なカード6">
+        <img src="img/puresio-u04.png" class="card-image" alt="代表的なカード7">
+        <img src="img/aziazi-u04.png" class="card-image" alt="代表的なカード8">
+        <img src="img/naha-u02.png" class="card-image" alt="代表的なカード9">
+        <img src="img/baha_u07.png" class="card-image" alt="代表的なカード10">
+      </div>
+      <p>一部カードには「プレミアム加工」や「サインカード」などの豪華仕様も存在し、コレクション性も抜群！</p>
+    </section>
+
+
+    <section id="howto">
+      <h2>遊び方</h2>
+      <p>リアルTCGならではの戦略性と臨場感！公式動画でルールを確認しよう。</p>
+      <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+        <iframe src="https://www.youtube.com/embed/tT3iN83cDno" frameborder="0" allowfullscreen
+          style="position: absolute; top:0; left:0; width:100%; height:100%;"></iframe>
+      </div>
+    </section>
+
+    <section id="products">
+      <h2>商品情報</h2>
+      <p>最新ブースターパックや構築済みデッキが続々登場！</p>
+      <p><a href="https://shadowverse-evolve.com/products/category/booster-pack/" target="_blank">公式ブースターパック一覧はこちら</a>
+      </p>
+    </section>
+
+    <section id="news">
+      <h2>ニュース</h2>
+      <p>新弾や大会情報を随時チェック！</p>
+      <p><a href="https://shadowverse-evolve.com/news/" target="_blank">公式ニュース一覧はこちら</a></p>
+    </section>
+
+    <section id="community">
+      <h2>コミュニティ</h2>
+      <p>最新情報はX（旧Twitter）やYouTubeで発信中！</p>
+      <p><a href="https://twitter.com/shadowverse_ev" target="_blank">公式Xはこちら</a></p>
+      <p><a href="https://www.youtube.com/@shadowverseevolve" target="_blank">公式YouTubeチャンネルはこちら</a></p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Shadowverse EVOLVE ファンサイト（非公式）
+  </footer>
+
+  <!-- モーダル -->
+  <div id="modal" class="modal">
+    <span class="modal-close">&times;</span>
+    <img id="modal-img" src="" alt="拡大画像"
+      style="max-width: 90vw; max-height: 90vh; border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.8);" />
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const modal = document.getElementById("modal");
+      const modalImg = document.getElementById("modal-img");
+      const closeBtn = document.querySelector(".modal-close");
+
+      document.querySelectorAll(".card-image").forEach(img => {
+        img.style.cursor = "pointer";
+        img.addEventListener("click", function () {
+          modal.style.display = "flex";
+          modalImg.src = this.src;
+        });
+      });
+
+      closeBtn.onclick = function () {
+        modal.style.display = "none";
+        modalImg.src = "";
+      };
+
+      modal.onclick = function (e) {
+        if (e.target === modal) {
+          modal.style.display = "none";
+          modalImg.src = "";
+        }
+      };
+    });
+  </script>
+
+</body>
+
+</html>
